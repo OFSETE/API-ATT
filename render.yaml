@@ -1,0 +1,14 @@
+services:
+- type: web
+  name: api-att
+  env: docker
+  branch: OFFSET-ENTERPRISE
+  dockerfilePath: Dockerfile
+  # Do not put secrets here. Configure them in Render's dashboard under Environment.
+  envVars:
+    - key: SUPABASE_URL
+      value: ""
+    - key: SUPABASE_SERVICE_ROLE_KEY
+      value: ""
+    - key: PORT
+      value: "3000"

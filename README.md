@@ -53,5 +53,18 @@ Deploy no Render:
 - Build & Start: `npm install` e `npm start`.
 - Após deploy, teste os endpoints listados acima.
 
+Deploy via Docker (Render)
+
+Este projeto já inclui um `Dockerfile` e um `render.yaml` para deploy via Docker no Render. Caso o painel do Render não ofereça a opção "Node" diretamente, use a opção "Docker" e o `Dockerfile` do repositório.
+
+Passos rápidos:
+
+1. No Render: New → Web Service → Connect GitHub → selecione `OFSETE/API-ATT` e a branch `OFFSET-ENTERPRISE`.
+2. Escolha Environment = Docker (Render detectará o `Dockerfile`) ou deixe que o `render.yaml` configure automaticamente.
+3. Em Environment → configure as variáveis:
+	- SUPABASE_URL = https://<seu-projeto>.supabase.co
+	- SUPABASE_SERVICE_ROLE_KEY = <sua_service_role_key>
+4. Deploy e aguarde. A URL pública do serviço será exibida no painel do Render.
+
 Link da API publicada no Render: (adicione aqui após o deploy)
 
